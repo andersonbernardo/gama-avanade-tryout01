@@ -22,7 +22,7 @@ function startServer(port) {
 	return serverObj;
 }
 
-const contentTypeMap = { html: "text/html", css: "text/css", jpg: "image/jpg" }
+const contentTypeMap = { html: "text/html", css: "text/css", jpg: "image/jpg", js: "application/javascript" }
 function getContentType(resourcePath) {
 	var ext = path.extname(resourcePath).replace('.', '')
 	return contentTypeMap[ext]

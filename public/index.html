@@ -5,14 +5,100 @@
 	<meta charset="utf-8">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<main role="main" id="main"></main>
+<main role="main" id="main">        
+  <div class="container-fluid header">
+    <h1>DÊ PROPÓSITO PARA O SEU CÓDIGO</h1>
+    <p style="padding: 0px 30px 0 25px" class="lead">
+      Cansado de desenvolver projetos sem sentido? Participe do Avanade Angular Academy
+    </p>
+    <button type="button" class="btn btn-lg btn-success" id="btn-apply-form"  data-toggle="modal" data-target="#apply-modal">Inscreva-se</button>
+  </div>    
+    
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">            
+        <p class="text-center font-weight-bold">Inscrições</p>
+        <p class="text-center">02/dez a 05/jan</p>            
+        <p>
+          Para se inscrever basta preencher o formulário e se preparar para o nosso teste técnico
+          com cursos online e simulados.
+        </p>
+      </div>
+      <div class="col-md-3">            
+        <p class="text-center font-weight-bold">Teste Técnico</p>
+        <p class="text-center">05/jan a 06/jan</p>            
+        <p>
+          Em seguida prove que você está preparado fazendo os testes tecnicos totalmente mão na
+          massa.
+        </p>
+      </div>
+      <div class="col-md-3">
+        <p class="text-center font-weight-bold">Seleção e Contratação</p>
+        <p class="text-center">07/jan a 14/jan</p>            
+        <p>
+          Os melhores candidatos serão entrevistados e contratados pela Avanade.
+        </p>
+      </div>
+      <div class="col-md-3">            
+        <p class="text-center font-weight-bold">Treinamento</p>
+        <p class="text-center">15/jan a 26/jan</p>            
+        <p>
+          Serão duas semanas de treinamento super hands-on com os melhores devs do mercado.
+        </p>
+      </div>        
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" id="apply-modal" role="dialog">
+    <div id="apply-error" class='d-none' >
+        <small class="d-none text-danger" id="feedback-email">Não é válido</small>
+        <small class="d-none text-danger" id="feedback-name">Não pode estar vazio</small>
+    </div>          
+    <div class="modal-dialog"  role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Inscrição</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" class="form-control data" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome"> 
+              
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control data" id="email" placeholder="Digite seu email">                    
+            </div>          
+            <button type="submit" id="btn-apply" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>      
+      </div>
+    </div>
+  </div>       
+
+  <div class="alert alert-success d-none" id="apply-success" role="alert">
+    Inscrição efetuada com sucesso
+  </div>
+  <div class="alert alert-danger d-none" id="main-error" role="alert">
+    Não foi possível efetuar sua inscrição. Tente mais tarde.
+  </div>
+</main>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script>
+  Script.Start($('#main'));
+</script>
 </body>
 </html>

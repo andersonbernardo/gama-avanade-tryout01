@@ -1,0 +1,14 @@
+.header {   
+    
+    padding: 4rem 1.5rem;
+    text-align: center;
+    color: white;
+    background-image: url('img/background-main.jpg'); background-position-y: 50%;background-size: 770%;
+}
+
+.header h1 {    
+    
+    font-weight: bold;
+    padding: 0px 30px 0 25px;
+    
+}
